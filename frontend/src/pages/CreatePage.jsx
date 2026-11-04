@@ -28,6 +28,7 @@ const CreatePage = () => {
         description: message,
         status: "error",
         isClosable: true,
+        duration: 3000,
       });
     } else {
       toast({
@@ -35,7 +36,9 @@ const CreatePage = () => {
         description: message,
         status: "success",
         isClosable: true,
+        duration: 3000,
       });
+      setNewProduct({ name: "", price: "", image: "" }); // Reset the form after successful creation
     }
   };
   return (
